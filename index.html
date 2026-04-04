@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Print Hub — The 3D Printing Resource Directory</title>
+  <meta name="description" content="A curated directory of 3D printing resources: STL sites, manufacturers, blogs, communities, software, and filament suppliers — all in one place." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">3D<strong>Print</strong>Hub</span>
+      </div>
+      <p class="header-tagline">The complete 3D printing resource directory</p>
+    </div>
+  </header>
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="sticky-nav" id="sticky-nav" role="navigation" aria-label="Category navigation">
+    <div class="container nav-inner">
+      <div class="nav-tabs" id="nav-tabs">
+        <!-- Tabs are injected by app.js -->
+      </div>
+      <div class="search-wrapper">
+        <span class="search-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Search all resources…"
+          aria-label="Search all resources"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO STATS BAR ===== -->
+  <div class="stats-bar" id="stats-bar">
+    <div class="container stats-inner">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" id="main-content" role="main">
+    <div class="container">
+      <!-- No-results message (hidden by default) -->
+      <div class="no-results" id="no-results" hidden>
+        <span class="no-results-icon">🔍</span>
+        <p>No results found for <strong id="no-results-query"></strong></p>
+        <p class="no-results-hint">Try a different search term or <button class="link-btn" id="clear-search-btn">clear the search</button>.</p>
+      </div>
+      <!-- Category sections injected here by app.js -->
+      <div id="categories-root"></div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <span class="logo-icon">⬡</span> <strong>3DPrintHub</strong> — A community-curated directory.
+        Data is stored in <code>data/sites.json</code> — open a PR to add a resource!
+      </p>
+      <p class="footer-note">Not affiliated with any listed company or product.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

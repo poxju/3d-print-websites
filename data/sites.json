@@ -1,0 +1,406 @@
+{
+  "categories": [
+    {
+      "id": "stl-sites",
+      "label": "STL File Sharing",
+      "icon": "🗂️",
+      "description": "Platforms where the community shares free and paid 3D printable models",
+      "sites": [
+        {
+          "name": "Printables",
+          "url": "https://www.printables.com",
+          "description": "Large free STL community backed by Prusa. Earn points for uploading and downloading models.",
+          "tags": ["free", "community", "prusa"]
+        },
+        {
+          "name": "Thingiverse",
+          "url": "https://www.thingiverse.com",
+          "description": "One of the oldest and largest repositories of free 3D printable models, maintained by MakerBot.",
+          "tags": ["free", "large-library"]
+        },
+        {
+          "name": "MyMiniFactory",
+          "url": "https://www.myminifactory.com",
+          "description": "Curated library of free and paid models, with a focus on quality and print-guaranteed files.",
+          "tags": ["free", "paid", "curated"]
+        },
+        {
+          "name": "Cults3D",
+          "url": "https://cults3d.com",
+          "description": "French marketplace for free and paid 3D print files with a strong designer community.",
+          "tags": ["free", "paid", "marketplace"]
+        },
+        {
+          "name": "Thangs",
+          "url": "https://thangs.com",
+          "description": "3D model search engine and community with geometric search capabilities.",
+          "tags": ["free", "search-engine"]
+        },
+        {
+          "name": "MakerWorld",
+          "url": "https://makerworld.com",
+          "description": "Bambu Lab's model sharing platform optimized for Bambu printers, with reward system.",
+          "tags": ["free", "bambu", "community"]
+        },
+        {
+          "name": "Yeggi",
+          "url": "https://www.yeggi.com",
+          "description": "Search engine that aggregates STL files from multiple platforms in one place.",
+          "tags": ["search-engine", "aggregator"]
+        },
+        {
+          "name": "Free3D",
+          "url": "https://free3d.com",
+          "description": "Repository of free and premium 3D models including printable STL files.",
+          "tags": ["free", "paid"]
+        },
+        {
+          "name": "Sketchfab",
+          "url": "https://sketchfab.com",
+          "description": "3D model viewer and marketplace with downloadable files, many printable.",
+          "tags": ["paid", "viewer", "marketplace"]
+        },
+        {
+          "name": "PrusaPrinters",
+          "url": "https://www.printables.com",
+          "description": "Rebranded as Printables — Prusa's community platform for sharing 3D models.",
+          "tags": ["free", "prusa"]
+        }
+      ]
+    },
+    {
+      "id": "manufacturers",
+      "label": "Manufacturers",
+      "icon": "🏭",
+      "description": "Official websites of 3D printer hardware manufacturers",
+      "sites": [
+        {
+          "name": "Bambu Lab",
+          "url": "https://bambulab.com",
+          "description": "Fast-growing manufacturer known for high-speed multi-material printers like the X1 Carbon and P1S.",
+          "tags": ["fdm", "multi-material", "high-speed"]
+        },
+        {
+          "name": "Prusa Research",
+          "url": "https://www.prusa3d.com",
+          "description": "Czech manufacturer of the legendary MK4 and XL printers, pioneers of open-source 3D printing.",
+          "tags": ["fdm", "open-source", "czech"]
+        },
+        {
+          "name": "Creality",
+          "url": "https://www.creality.com",
+          "description": "Chinese manufacturer offering budget-friendly printers like the Ender series and K1.",
+          "tags": ["fdm", "budget", "chinese"]
+        },
+        {
+          "name": "Elegoo",
+          "url": "https://www.elegoo.com",
+          "description": "Popular brand for resin (MSLA) printers like the Mars and Saturn series.",
+          "tags": ["resin", "msla", "budget"]
+        },
+        {
+          "name": "AnkerMake",
+          "url": "https://www.ankermake.com",
+          "description": "Anker's 3D printing brand offering fast, AI-assisted printers like the M5C.",
+          "tags": ["fdm", "high-speed", "ai"]
+        },
+        {
+          "name": "Flashforge",
+          "url": "https://www.flashforge.com",
+          "description": "Manufacturer of reliable dual-extrusion and education-focused FDM printers.",
+          "tags": ["fdm", "dual-extrusion", "education"]
+        },
+        {
+          "name": "Formlabs",
+          "url": "https://formlabs.com",
+          "description": "Professional-grade SLA and SLS resin printers widely used in dental and engineering.",
+          "tags": ["sla", "sls", "professional"]
+        },
+        {
+          "name": "Ultimaker (UltiMaker)",
+          "url": "https://ultimaker.com",
+          "description": "Dutch company known for professional FDM printers used in enterprise environments.",
+          "tags": ["fdm", "professional", "enterprise"]
+        },
+        {
+          "name": "Raise3D",
+          "url": "https://www.raise3d.com",
+          "description": "Industrial-grade FDM printers with large build volumes for professional use.",
+          "tags": ["fdm", "industrial", "large-format"]
+        },
+        {
+          "name": "QIDI Tech",
+          "url": "https://qidi3d.com",
+          "description": "Mid-range manufacturer offering fast enclosed printers with good value.",
+          "tags": ["fdm", "enclosed", "mid-range"]
+        },
+        {
+          "name": "Artillery",
+          "url": "https://artillery3d.com",
+          "description": "Budget-friendly FDM printers known for the Sidewinder and Genius series.",
+          "tags": ["fdm", "budget"]
+        },
+        {
+          "name": "Phrozen",
+          "url": "https://phrozen3d.com",
+          "description": "Taiwanese resin printer manufacturer known for high-resolution Sonic series.",
+          "tags": ["resin", "msla", "high-resolution"]
+        }
+      ]
+    },
+    {
+      "id": "blogs",
+      "label": "Blogs & News",
+      "icon": "📰",
+      "description": "Blogs, news outlets, and editorial sites covering 3D printing",
+      "sites": [
+        {
+          "name": "All3DP",
+          "url": "https://all3dp.com",
+          "description": "Comprehensive 3D printing magazine with reviews, tutorials, and industry news.",
+          "tags": ["news", "reviews", "tutorials"]
+        },
+        {
+          "name": "3DPrint.com",
+          "url": "https://3dprint.com",
+          "description": "Daily industry news covering 3D printing technologies, business, and research.",
+          "tags": ["news", "industry"]
+        },
+        {
+          "name": "Fabbaloo",
+          "url": "https://fabbaloo.com",
+          "description": "Long-running blog with deep analysis of trends, products, and companies in additive manufacturing.",
+          "tags": ["blog", "analysis", "industry"]
+        },
+        {
+          "name": "Hackaday – 3D Printing",
+          "url": "https://hackaday.com/tag/3d-printing/",
+          "description": "Hackaday's 3D printing tag — creative projects, hacks, and community builds.",
+          "tags": ["diy", "hacks", "community"]
+        },
+        {
+          "name": "3D Printing Industry",
+          "url": "https://3dprintingindustry.com",
+          "description": "B2B-focused news covering enterprise additive manufacturing trends and research.",
+          "tags": ["news", "b2b", "enterprise"]
+        },
+        {
+          "name": "Thomas Sanladerer (YouTube)",
+          "url": "https://www.youtube.com/@MadeWithLayers",
+          "description": "In-depth reviews and tutorials on FDM printers and materials by a respected community creator.",
+          "tags": ["youtube", "reviews", "tutorials"]
+        },
+        {
+          "name": "Teaching Tech (YouTube)",
+          "url": "https://www.youtube.com/@TeachingTech",
+          "description": "Calibration guides, printer reviews, and how-to videos for makers of all levels.",
+          "tags": ["youtube", "calibration", "tutorials"]
+        },
+        {
+          "name": "Prusa Blog",
+          "url": "https://blog.prusa3d.com",
+          "description": "Official Prusa Research blog with deep technical articles, tutorials, and company news.",
+          "tags": ["blog", "prusa", "technical"]
+        }
+      ]
+    },
+    {
+      "id": "communities",
+      "label": "Communities & Forums",
+      "icon": "💬",
+      "description": "Online communities, forums, and social spaces for 3D printing enthusiasts",
+      "sites": [
+        {
+          "name": "r/3Dprinting",
+          "url": "https://www.reddit.com/r/3Dprinting/",
+          "description": "The largest 3D printing subreddit with over 4 million members sharing prints, tips, and help.",
+          "tags": ["reddit", "community", "general"]
+        },
+        {
+          "name": "r/prusa3d",
+          "url": "https://www.reddit.com/r/prusa3d/",
+          "description": "Dedicated community for Prusa printer owners and enthusiasts.",
+          "tags": ["reddit", "prusa"]
+        },
+        {
+          "name": "r/bambulab",
+          "url": "https://www.reddit.com/r/bambulab/",
+          "description": "Community for Bambu Lab printer users — tips, prints, and troubleshooting.",
+          "tags": ["reddit", "bambu"]
+        },
+        {
+          "name": "Prusa Forum",
+          "url": "https://forum.prusa3d.com",
+          "description": "Official Prusa Research forum for support, mods, and community discussion.",
+          "tags": ["forum", "prusa", "support"]
+        },
+        {
+          "name": "Bambu Lab Community",
+          "url": "https://community.bambulab.com",
+          "description": "Official Bambu Lab forum for user discussions, feature requests, and help.",
+          "tags": ["forum", "bambu", "support"]
+        },
+        {
+          "name": "3D Printing Stack Exchange",
+          "url": "https://3dprinting.stackexchange.com",
+          "description": "Q&A site for technical questions about 3D printing, part of the Stack Exchange network.",
+          "tags": ["q&a", "technical", "stack-exchange"]
+        },
+        {
+          "name": "Reprap Forum",
+          "url": "https://forum.reprap.org",
+          "description": "The original open-source 3D printing forum, home to RepRap project discussions.",
+          "tags": ["forum", "open-source", "reprap"]
+        },
+        {
+          "name": "Printables Discord",
+          "url": "https://discord.gg/printables",
+          "description": "Official Discord server for the Printables community by Prusa.",
+          "tags": ["discord", "community", "prusa"]
+        }
+      ]
+    },
+    {
+      "id": "software",
+      "label": "Software & Slicers",
+      "icon": "🖥️",
+      "description": "Slicers, design tools, and software used in the 3D printing workflow",
+      "sites": [
+        {
+          "name": "Bambu Studio",
+          "url": "https://bambulab.com/en/download/studio",
+          "description": "Bambu Lab's official slicer based on PrusaSlicer with multi-material and cloud features.",
+          "tags": ["slicer", "bambu", "free"]
+        },
+        {
+          "name": "PrusaSlicer",
+          "url": "https://www.prusa3d.com/page/prusaslicer_424/",
+          "description": "Open-source, powerful slicer by Prusa Research supporting a wide range of printers.",
+          "tags": ["slicer", "open-source", "free"]
+        },
+        {
+          "name": "UltiMaker Cura",
+          "url": "https://ultimaker.com/software/ultimaker-cura/",
+          "description": "The most popular free slicer, supporting hundreds of printer profiles.",
+          "tags": ["slicer", "free", "popular"]
+        },
+        {
+          "name": "OrcaSlicer",
+          "url": "https://github.com/SoftFever/OrcaSlicer",
+          "description": "Community fork of Bambu Studio with enhanced calibration tools and printer support.",
+          "tags": ["slicer", "open-source", "free", "community"]
+        },
+        {
+          "name": "SuperSlicer",
+          "url": "https://github.com/supermerill/SuperSlicer",
+          "description": "Feature-rich fork of PrusaSlicer with extra calibration and print quality options.",
+          "tags": ["slicer", "open-source", "free"]
+        },
+        {
+          "name": "Blender",
+          "url": "https://www.blender.org",
+          "description": "Professional open-source 3D modeling suite, widely used to create printable models.",
+          "tags": ["modeling", "free", "open-source"]
+        },
+        {
+          "name": "Fusion 360",
+          "url": "https://www.autodesk.com/products/fusion-360/",
+          "description": "Autodesk's CAD/CAM software popular for engineering and product design for printing.",
+          "tags": ["cad", "autodesk", "freemium"]
+        },
+        {
+          "name": "Meshmixer",
+          "url": "https://meshmixer.com",
+          "description": "Free mesh editing and repair tool by Autodesk for fixing and preparing STL files.",
+          "tags": ["mesh-repair", "free", "autodesk"]
+        },
+        {
+          "name": "Tinkercad",
+          "url": "https://www.tinkercad.com",
+          "description": "Browser-based beginner-friendly CAD tool by Autodesk, great for simple models.",
+          "tags": ["cad", "beginner", "browser", "free"]
+        },
+        {
+          "name": "Octoprint",
+          "url": "https://octoprint.org",
+          "description": "Open-source web interface for remotely monitoring and controlling 3D printers.",
+          "tags": ["remote-control", "open-source", "raspberry-pi"]
+        },
+        {
+          "name": "Bambu Handy",
+          "url": "https://bambulab.com/en/download/handy",
+          "description": "Bambu Lab's mobile app for monitoring and controlling Bambu printers remotely.",
+          "tags": ["mobile", "bambu", "remote-control"]
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Filament & Materials",
+      "icon": "🧵",
+      "description": "Suppliers of filament, resin, and other 3D printing materials",
+      "sites": [
+        {
+          "name": "Prusament",
+          "url": "https://prusament.com",
+          "description": "Premium quality filament manufactured by Prusa Research with tight tolerances.",
+          "tags": ["filament", "premium", "prusa"]
+        },
+        {
+          "name": "Bambu Filament",
+          "url": "https://bambulab.com/en/filament",
+          "description": "Official Bambu Lab filament range with RFID-tagged spools for automatic profile loading.",
+          "tags": ["filament", "bambu", "rfid"]
+        },
+        {
+          "name": "PolyMaker",
+          "url": "https://polymaker.com",
+          "description": "Innovative filament brand known for specialty materials like PolyTerra and PolyMax.",
+          "tags": ["filament", "specialty", "eco-friendly"]
+        },
+        {
+          "name": "Hatchbox",
+          "url": "https://hatchbox3d.com",
+          "description": "Popular US-based filament brand offering reliable PLA, ABS, and PETG at affordable prices.",
+          "tags": ["filament", "budget", "us"]
+        },
+        {
+          "name": "eSUN",
+          "url": "https://www.esun3d.com",
+          "description": "Chinese manufacturer of a wide range of affordable filaments and resins.",
+          "tags": ["filament", "resin", "budget", "chinese"]
+        },
+        {
+          "name": "Matterhackers",
+          "url": "https://www.matterhackers.com",
+          "description": "US retailer for 3D printing supplies, filament, resins, and hardware.",
+          "tags": ["filament", "retailer", "us"]
+        },
+        {
+          "name": "Overture",
+          "url": "https://overture3d.com",
+          "description": "Budget-friendly filament brand known for consistent PLA and PLA+ spools.",
+          "tags": ["filament", "budget", "pla"]
+        },
+        {
+          "name": "Colorfabb",
+          "url": "https://colorfabb.com",
+          "description": "Dutch specialty filament brand offering premium blends, carbon fiber, and nGen.",
+          "tags": ["filament", "premium", "specialty", "dutch"]
+        },
+        {
+          "name": "Siraya Tech",
+          "url": "https://sirayatech.com",
+          "description": "Maker of engineering-grade resins with excellent mechanical properties.",
+          "tags": ["resin", "engineering", "specialty"]
+        },
+        {
+          "name": "Elegoo Resin",
+          "url": "https://www.elegoo.com/collections/resin",
+          "description": "Elegoo's range of standard and ABS-like resins compatible with most MSLA printers.",
+          "tags": ["resin", "budget", "elegoo"]
+        }
+      ]
+    }
+  ]
+}
