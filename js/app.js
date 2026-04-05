@@ -18,6 +18,7 @@
 
   // ---- State ----
   let allCategories = [];
+  let currentSort = 'az'; // 'az' | 'users'
 
   // ---- DOM refs ----
   const categoriesRoot  = document.getElementById('categories-root');
@@ -36,6 +37,7 @@
       const data = await resp.json();
       allCategories = data.categories || [];
       render();
+      setupSort();
       setupBackToTop();
     } catch (err) {
       categoriesRoot.innerHTML = `
@@ -84,6 +86,22 @@
     `;
   }
 
+  // ---- Sorting ----
+  function sortedSites(sites) {
+    const arr = [...sites];
+    if (currentSort === 'users') {
+      return arr.sort((a, b) => (b.users || 0) - (a.users || 0));
+    }
+    return arr.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  function formatUsers(n) {
+    if (!n) return null;
+    if (n >= 1000000) return (n / 1000000).toFixed(n % 1000000 === 0 ? 0 : 1) + 'M';
+    if (n >= 1000) return Math.round(n / 1000) + 'K';
+    return n.toString();
+  }
+
   // ---- Category Sections ----
   function renderCategories(query = '') {
     const inner = allCategories.map(cat => renderCategory(cat, query)).join('');
@@ -91,14 +109,12 @@
   }
 
   function renderCategory(cat, query) {
-    const matchingSites = query
-      ? cat.sites.filter(site => siteMatchesQuery(site, query))
-      : cat.sites;
-
-    if (query && matchingSites.length === 0) return '';
+    let sites = sortedSites(cat.sites);
+    if (query) sites = sites.filter(site => siteMatchesQuery(site, query));
+    if (query && sites.length === 0) return '';
 
     const accentClass = ACCENT_CLASS[cat.id] || 'accent-stl';
-    const rows = matchingSites.map(site => renderRow(site, cat.id, query)).join('');
+    const rows = sites.map(site => renderRow(site, cat.id, query)).join('');
 
     return `
       <section
@@ -110,7 +126,7 @@
         <div class="col-header">
           <span class="col-accent-bar ${accentClass}"></span>
           <h2 class="col-title" id="cat-title-${cat.id}">${cat.label}</h2>
-          <span class="col-count">${matchingSites.length}</span>
+          <span class="col-count">${sites.length}</span>
         </div>
         <div class="site-list" role="list">
           ${rows}
@@ -124,8 +140,11 @@
     const domain     = extractDomain(site.url);
     const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
     const initial    = site.name.charAt(0).toUpperCase();
-
     const displayName = query ? highlight(site.name, query) : escHtml(site.name);
+    const userCount  = formatUsers(site.users);
+    const userBadge  = (currentSort === 'users' && userCount)
+      ? `<span class="row-users">${userCount}</span>`
+      : '';
 
     return `
       <a
@@ -149,11 +168,25 @@
         <span class="row-body">
           <span class="row-name">${displayName}</span>
         </span>
+        ${userBadge}
         <svg class="row-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
         </svg>
       </a>
     `;
+  }
+
+  // ===================================================
+  // SORT
+  // ===================================================
+  function setupSort() {
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentSort = btn.dataset.sort;
+        document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === currentSort));
+        renderCategories();
+      });
+    });
   }
 
   // ===================================================
