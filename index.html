@@ -38,27 +38,24 @@
   <main class="main-content" id="main-content" role="main">
     <div class="container">
       <!-- STL Search -->
-      <div class="stl-search-wrap">
-        <p class="stl-search-label">Search across all STL platforms at once</p>
-        <form class="stl-search-form" id="stl-search-form" role="search">
-          <div class="stl-search-field">
-            <svg class="stl-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-            <input
-              type="search"
-              id="stl-search-input"
-              class="stl-search-input"
-              placeholder="e.g. dragon, cable holder, lithophane…"
-              autocomplete="off"
-              spellcheck="false"
-              aria-label="Search STL files"
-            />
-            <button type="submit" class="stl-search-btn">Search STL Sites</button>
-          </div>
-        </form>
-        <div class="stl-results" id="stl-results" hidden></div>
-      </div>
+      <form class="stl-search-form" id="stl-search-form" role="search">
+        <div class="stl-search-field">
+          <svg class="stl-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            type="search"
+            id="stl-search-input"
+            class="stl-search-input"
+            placeholder="e.g. dragon, cable holder, lithophane…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search STL files"
+          />
+          <button type="submit" class="stl-search-btn">Search STL Sites</button>
+        </div>
+      </form>
+      <div class="stl-results" id="stl-results" hidden></div>
 
       <!-- No-results message (hidden by default) -->
       <div class="no-results" id="no-results" hidden>
@@ -75,10 +72,11 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>
-        🗂️ <strong>3DPrintDir</strong> — A community-curated directory.
+        This is a community-curated directory.
         Data is stored in <code>data/sites.json</code> — open a PR to add a resource!
       </p>
       <p class="footer-note">Not affiliated with any listed company or product.</p>
+      <p class="footer-note">* User / subscriber counts are approximate estimates and may be out of date.</p>
     </div>
   </footer>
 

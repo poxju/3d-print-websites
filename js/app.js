@@ -146,8 +146,9 @@
     const initial    = site.name.charAt(0).toUpperCase();
     const displayName = query ? highlight(site.name, query) : escHtml(site.name);
     const userCount  = formatUsers(site.users);
+    const approxMark = (userCount && site.usersApproximate) ? '<span class="row-users-approx" title="Approximate figure">*</span>' : '';
     const userBadge  = (currentSort === 'users' && userCount)
-      ? `<span class="row-users">${userCount}</span>`
+      ? `<span class="row-users">${userCount}${approxMark}</span>`
       : '';
 
     return `
