@@ -135,6 +135,202 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 
 /* ===================================================
+   STL SEARCH (inside main content)
+   =================================================== */
+.stl-search-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.stl-search-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stl-search-form {
+  width: 100%;
+  max-width: 620px;
+}
+
+.stl-search-field {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.stl-search-field:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-subtle);
+}
+
+.stl-search-icon {
+  flex-shrink: 0;
+  color: var(--color-text-faint);
+  margin-left: 14px;
+  pointer-events: none;
+}
+
+.stl-search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--color-text);
+}
+
+.stl-search-input::placeholder { color: var(--color-text-faint); }
+
+.stl-search-btn {
+  flex-shrink: 0;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.stl-search-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Results panel */
+.stl-results {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Yeggi hero card */
+.yeggi-hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.yeggi-hero:hover {
+  background: var(--color-accent-subtle);
+  box-shadow: 0 0 0 3px var(--color-accent-subtle);
+}
+
+.yeggi-favicon {
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: var(--color-surface-2);
+  padding: 3px;
+  object-fit: contain;
+}
+
+.yeggi-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.yeggi-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.yeggi-title strong { font-weight: 700; }
+
+.yeggi-sub {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+.yeggi-cta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* "Also search on" row */
+.sr-also {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border);
+}
+
+.sr-also-label {
+  font-size: 11px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sr-also-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.sr-also-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+
+.sr-also-fav {
+  border-radius: 2px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .stl-search-btn { padding: 10px 12px; font-size: 11px; }
+  .rc-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+}
+
+/* ===================================================
    STATS BAR
    =================================================== */
 .stats-bar {

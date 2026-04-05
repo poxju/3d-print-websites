@@ -11,61 +11,63 @@
           "url": "https://cults3d.com",
           "description": "French marketplace for free and paid 3D print files with a strong designer community.",
           "tags": ["free", "paid", "marketplace"],
-          "users": 3000000
+          "users": 3000000,
+          "searchUrl": "https://cults3d.com/en/3d-models/search?q={q}"
         },
         {
           "name": "Free3D",
           "url": "https://free3d.com",
           "description": "Repository of free and premium 3D models including printable STL files.",
-          "tags": ["free", "paid"]
+          "tags": ["free", "paid"],
+          "searchUrl": "https://free3d.com/3d-models/{q}"
         },
         {
           "name": "MakerWorld",
           "url": "https://makerworld.com",
           "description": "Bambu Lab's model sharing platform optimized for Bambu printers, with reward system.",
           "tags": ["free", "bambu", "community"],
-          "users": 2000000
+          "users": 2000000,
+          "searchUrl": "https://makerworld.com/en/search?keyword={q}"
         },
         {
           "name": "MyMiniFactory",
           "url": "https://www.myminifactory.com",
           "description": "Curated library of free and paid models, with a focus on quality and print-guaranteed files.",
           "tags": ["free", "paid", "curated"],
-          "users": 4000000
+          "users": 4000000,
+          "searchUrl": "https://www.myminifactory.com/search/?query={q}"
         },
         {
           "name": "Printables",
           "url": "https://www.printables.com",
           "description": "Large free STL community backed by Prusa. Earn points for uploading and downloading models.",
           "tags": ["free", "community", "prusa"],
-          "users": 5000000
+          "users": 5000000,
+          "searchUrl": "https://www.printables.com/search/models?q={q}"
         },
         {
           "name": "Sketchfab",
           "url": "https://sketchfab.com",
           "description": "3D model viewer and marketplace with downloadable files, many printable.",
           "tags": ["paid", "viewer", "marketplace"],
-          "users": 7000000
+          "users": 7000000,
+          "searchUrl": "https://sketchfab.com/search?q={q}&type=models"
         },
         {
           "name": "Thangs",
           "url": "https://thangs.com",
           "description": "3D model search engine and community with geometric search capabilities.",
           "tags": ["free", "search-engine"],
-          "users": 1000000
+          "users": 1000000,
+          "searchUrl": "https://thangs.com/search/{q}"
         },
         {
           "name": "Thingiverse",
           "url": "https://www.thingiverse.com",
           "description": "One of the oldest and largest repositories of free 3D printable models, maintained by MakerBot.",
           "tags": ["free", "large-library"],
-          "users": 7000000
-        },
-        {
-          "name": "Yeggi",
-          "url": "https://www.yeggi.com",
-          "description": "Search engine that aggregates STL files from multiple platforms in one place.",
-          "tags": ["search-engine", "aggregator"]
+          "users": 7000000,
+          "searchUrl": "https://www.thingiverse.com/search?q={q}"
         }
       ]
     },

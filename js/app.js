@@ -26,6 +26,9 @@
   const noResultsQuery  = document.getElementById('no-results-query');
   const clearSearchBtn  = document.getElementById('clear-search-btn');
   const backToTopBtn    = document.getElementById('back-to-top');
+  const stlSearchForm   = document.getElementById('stl-search-form');
+  const stlSearchInput  = document.getElementById('stl-search-input');
+  const stlResults      = document.getElementById('stl-results');
 
   // ===================================================
   // INIT
@@ -38,6 +41,7 @@
       allCategories = data.categories || [];
       render();
       setupSort();
+      setupStlSearch();
       setupBackToTop();
     } catch (err) {
       categoriesRoot.innerHTML = `
@@ -174,6 +178,70 @@
         </svg>
       </a>
     `;
+  }
+
+  // ===================================================
+  // STL SEARCH
+  // ===================================================
+  function setupStlSearch() {
+    stlSearchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const q = stlSearchInput.value.trim();
+      if (!q) return;
+      fetchAndRenderResults(q);
+    });
+
+    stlSearchInput.addEventListener('input', () => {
+      if (!stlSearchInput.value.trim()) {
+        stlResults.hidden = true;
+        stlResults.innerHTML = '';
+      }
+    });
+  }
+
+  function fetchAndRenderResults(query) {
+    const stlCat  = allCategories.find(c => c.id === 'stl-sites');
+    const encoded = encodeURIComponent(query);
+    const yeggiUrl = `https://www.yeggi.com/q/${encoded}/`;
+
+    const others = stlCat
+      ? stlCat.sites.filter(s => s.searchUrl)
+      : [];
+
+    const otherLinks = others.map(site => {
+      const domain     = extractDomain(site.url);
+      const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+      const href       = site.searchUrl.replace('{q}', encoded);
+      return `
+        <a class="sr-also-btn" href="${escHtml(href)}" target="_blank" rel="noopener noreferrer">
+          <img class="sr-also-fav" src="${faviconUrl}" alt="" width="13" height="13"
+            onerror="this.style.display='none'" />
+          ${escHtml(site.name)}
+          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+          </svg>
+        </a>`;
+    }).join('');
+
+    stlResults.innerHTML = `
+      <a class="yeggi-hero" href="${escHtml(yeggiUrl)}" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=yeggi.com&sz=64" class="yeggi-favicon" alt="" width="32" height="32" />
+        <span class="yeggi-info">
+          <span class="yeggi-title">Search <strong>"${escHtml(query)}"</strong> across all STL platforms</span>
+          <span class="yeggi-sub">via Yeggi — searches Thingiverse, Printables, MyMiniFactory, Cults3D &amp; more</span>
+        </span>
+        <span class="yeggi-cta">
+          Open Yeggi
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+          </svg>
+        </span>
+      </a>
+      <div class="sr-also">
+        <span class="sr-also-label">Or search directly on</span>
+        ${otherLinks}
+      </div>`;
+    stlResults.hidden = false;
   }
 
   // ===================================================
